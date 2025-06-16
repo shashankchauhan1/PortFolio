@@ -1,0 +1,25 @@
+#root {
+  box-sizing: border-box;
+  border: 2px solid gold;
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.names{
+  font-family: 'DM Serif Text', serif;
+  color: #bbb9b9;
+  text-align: center;
+  margin-bottom: 1rem;
+  animation: names 1s ease-in-out;
+}
+
+@keyframes names {
+  0% {
+    margin-right: 10%;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

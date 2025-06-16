@@ -1,0 +1,28 @@
+.main{
+    display: flex;
+}
+
+li{
+    list-style: none;
+    font-family: "DM Serif Text", serif;
+    text-transform: uppercase;
+}
+
+li a{
+    color: white;
+}
+
+li:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: transform;
+    transition-duration: .5s;
+    text-shadow: rgb(255, 255, 255) 0px 0px 10px;
+}
+
+.logo{
+    border-radius: 50%;
+    width: 5%;
+    height: 5%;
+    box-shadow: 2px 2px 5px red;
+}
