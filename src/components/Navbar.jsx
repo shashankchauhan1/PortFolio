@@ -54,7 +54,7 @@ const Navbar = () => {
         
         <a href="#project" onClick={closeMenu} style={{ color:'white' }} className="hover:text-yellow-400 transition">Projects</a>
 
-        <a href="#" onClick={closeMenu} style={{ color:'white' }} className="hover:text-yellow-400 transition">Resume</a>
+        <a href={resume} onClick={closeMenu} style={{ color:'white' }} className="hover:text-yellow-400 transition">Resume</a>
 
         <a href="#contact" onClick={closeMenu} style={{ color:'white' }} className="hover:text-yellow-400 transition">Contact</a>
       </div>
