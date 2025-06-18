@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from '../assets/logo3.png';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.css'; 
+import resume from '../assets/Shashank_Resume.pdf';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,9 +23,15 @@ const Navbar = () => {
       {/* Desktop Menu */}
       <ul className="hidden sm:flex gap-6 text-sm font-serif uppercase">
         <li><a href="#home" onClick={closeMenu} style={{ color:'white' }} className="hover:text-yellow-400 transition">Home</a></li>
+        
         <li><a href="#about" onClick={closeMenu} style={{ color:'white' }} className="hover:text-yellow-400 transition">About</a></li>
+        
         <li><a href="#skills" onClick={closeMenu} style={{ color:'white' }} className="hover:text-yellow-400 transition">Skills</a></li>
+        
         <li><a href="#project" onClick={closeMenu} style={{ color:'white' }} className="hover:text-yellow-400 transition">Projects</a></li>
+        
+        <li><a href={resume} onClick={closeMenu} style={{ color:'white' }} className="hover:text-yellow-400 transition">Resume</a></li>
+
         <li><a href="#contact" onClick={closeMenu} style={{ color:'white' }} className="hover:text-yellow-400 transition">Contact</a></li>
       </ul>
 
@@ -40,9 +47,15 @@ const Navbar = () => {
         } sm:hidden flex-col absolute top-16 left-0 w-full bg-[#171717] text-center gap-6 py-6 font-serif uppercase text-base z-10 transition-all duration-300`}
       >
         <a href="#home" onClick={closeMenu} style={{ color:'white' }} className="hover:text-yellow-400 transition">Home</a>
+        
         <a href="#about" onClick={closeMenu} style={{ color:'white' }} className="hover:text-yellow-400 transition">About</a>
+        
         <a href="#skills" onClick={closeMenu} style={{ color:'white' }} className="hover:text-yellow-400 transition">Skills</a>
+        
         <a href="#project" onClick={closeMenu} style={{ color:'white' }} className="hover:text-yellow-400 transition">Projects</a>
+
+        <a href="#" onClick={closeMenu} style={{ color:'white' }} className="hover:text-yellow-400 transition">Resume</a>
+
         <a href="#contact" onClick={closeMenu} style={{ color:'white' }} className="hover:text-yellow-400 transition">Contact</a>
       </div>
     </nav>
