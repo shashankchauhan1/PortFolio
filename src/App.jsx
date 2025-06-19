@@ -15,6 +15,7 @@ import gofarasyoucan from './assets/gfayc.png'
 import weatherapp from './assets/wa.gif'
 import portfolio from './assets/bw.png'
 import hotelbooking from './assets/hb.gif'
+import notepadImage from './assets/notepadImage.gif'
 
 function App() {
   return (
@@ -75,6 +76,12 @@ function App() {
             description="A responsive and elegant personal portfolio built with React and TailwindCSS, showcasing projects, skills, and contact details."
             link="https://shashankchauhan1.github.io/React-portfolio/#about"
             image={portfolio}
+          />
+          <Project
+            title="Notepad App"
+            description="An effective notepad application built with React and Nodejs, allowing users to create, edit, and delete notes with Authentication Features."
+            link="https://nottepreziosa.netlify.app/"
+            image={notepadImage}
           />
         </div>
       </div>
