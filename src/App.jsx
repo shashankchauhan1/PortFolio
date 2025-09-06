@@ -80,7 +80,7 @@ function App() {
           <Project
             title="Notepad App"
             description="An effective notepad application built with React and Nodejs, allowing users to create, edit, and delete notes with Authentication Features."
-            link="https://nottepreziosa.netlify.app/"
+            link="https://nottepreziosa1.netlify.app/login"
             image={notepadImage}
           />
         </div>
