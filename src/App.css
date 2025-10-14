@@ -1,25 +1,37 @@
-#root {
-  box-sizing: border-box;
-  border: 2px solid gold;
-  width: 100%;
-  min-height: 100vh;
-  padding: 2rem;
+@import 'aos/dist/aos.css';
+
+body {
+  background-color: #030712; /* Dark blue-slate background */
+  color: white;
 }
 
-.names{
-  font-family: 'DM Serif Text', serif;
-  color: #bbb9b9;
-  text-align: center;
-  margin-bottom: 1rem;
-  animation: names 1s ease-in-out;
+/* For the glowing hero name */
+.hero-name-glow {
+  color: #22D3EE;
+  text-shadow: 0 0 10px rgba(34, 211, 238, 0.7);
 }
 
-@keyframes names {
-  0% {
-    margin-right: 10%;
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+/* For the section headers (My Skills, My Projects, etc.) */
+.section-header {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(34, 211, 238, 0.5);
+}
+
+/* For the links in the contact section */
+.contact-link {
+  color: #22D3EE;
+  text-decoration: underline;
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-link:hover {
+  text-shadow: 0 0 8px #22D3EE;
+  color: #fff;
+}
+
+/* Helper class to ensure sections with cards are transparent */
+.transparent-section {
+  background-color: transparent;
+  position: relative;
+  z-index: 2;
 }

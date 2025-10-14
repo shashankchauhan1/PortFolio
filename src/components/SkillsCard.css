@@ -1,38 +1,66 @@
+/* === Main Skill Card Container === */
 .skill-card {
-  width: 7.5rem;  /* 120px → 7.5rem */
+  width: 7.5rem;
   height: 7.5rem;
-  border-radius: 0.75rem; /* 12px */
-  box-shadow: 0 3px 8px rgba(255, 255, 255, 0.8);
-  color: white;
-  font-size: 0.85rem;
+  margin: 0.5rem;
+  perspective: 800px;
+}
+
+/* === Inner Content Wrapper for the 3D Tilt === */
+.skill-card-inner {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease-in-out;
-  margin: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.05); /* subtle background */
-  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.4));
+  
+  /* NEW: Added a dark, colorful cyan gradient background */
+  background: linear-gradient(145deg, rgba(3, 7, 18, 0.7), rgba(8, 51, 68, 0.7)); /* Dark Slate to Dark Cyan */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  /* Initial subtle border and shadow */
+  border: 1px solid rgba(34, 211, 238, 0.2);
+  box-shadow: 0 0 15px rgba(34, 211, 238, 0.1);
+  border-radius: 0.75rem;
+
+  color: white;
+  font-size: 0.85rem;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+  transform-style: preserve-3d;
+  position: relative;
+  overflow: hidden;
 }
 
-.skill-card:hover {
-  transform: scale(1.05);
+.skill-card:hover .skill-card-inner {
+  transform: rotateY(var(--rotateY)) rotateX(var(--rotateX)) translateZ(20px);
+  border-color: rgba(34, 211, 238, 0.7);
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.6);
 }
 
+/* === Icon Styling & Glow Effect === */
 .skill-icon {
-  width: 3.75rem;  /* 60px → 3.75rem */
+  width: 3.75rem;
   height: 3.75rem;
   margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 5px rgba(34, 211, 238, 0.5));
+  transition: filter 0.3s ease;
 }
 
-/* 📱 Responsive Behavior */
+.skill-card:hover .skill-icon {
+  filter: drop-shadow(0 0 10px #22D3EE);
+}
+
+/* === Responsive Behavior (no changes needed) === */
 @media (max-width: 768px) {
   .skill-card {
     width: 5.5rem;
     height: 5.5rem;
+  }
+  .skill-card-inner {
     font-size: 0.75rem;
   }
-
   .skill-icon {
     width: 2.75rem;
     height: 2.75rem;
@@ -43,9 +71,10 @@
   .skill-card {
     width: 5rem;
     height: 5rem;
+  }
+  .skill-card-inner {
     font-size: 0.7rem;
   }
-
   .skill-icon {
     width: 2.5rem;
     height: 2.5rem;

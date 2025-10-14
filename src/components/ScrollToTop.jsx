@@ -1,46 +1,38 @@
-import { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import './ScrollToTop.css'; // Import the new futuristic styles
 
 const ScrollToTop = () => {
-  useEffect(() => {
-    const btn = document.getElementById('scrollToTopBtn');
+  // State to track button visibility
+  const [isVisible, setIsVisible] = useState(false);
 
+  useEffect(() => {
+    // Function to check scroll position
     const handleScroll = () => {
       if (window.scrollY > 200) {
-        btn.style.display = 'block';
+        setIsVisible(true);
       } else {
-        btn.style.display = 'none';
+        setIsVisible(false);
       }
     };
 
+    // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
 
+    // Clean up the event listener on component unmount
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Function to scroll to top
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <button
-      id="scrollToTopBtn"
       onClick={scrollTop}
       aria-label="Scroll to top"
-      style={{
-        position: 'fixed',
-        bottom: '1rem',
-        right: '1rem',
-        backgroundColor: '#fbbf24',
-        color: 'black',
-        padding: '10px 14px',
-        borderRadius: '50%',
-        border: 'none',
-        display: 'none',
-        cursor: 'pointer',
-        fontSize: '16px',
-        boxShadow: '0 4px 6px rgba(0,0,0,0.3)',
-        zIndex: 1000
-      }}
+      // Apply CSS classes conditionally for the fade-in animation
+      className={`scroll-to-top-btn ${isVisible ? 'visible' : ''}`}
     >
       <i className="fa-solid fa-arrow-up"></i>
     </button>
