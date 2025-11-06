@@ -24,6 +24,7 @@ import portfolio from './assets/bw.png'
 import hotelbooking from './assets/hb.gif'
 import notepadImage from './assets/notepadImage.gif'
 import cloudBox from './assets/cloudBox.gif'
+import next from './assets/next.png'
 
 function App() {
 
@@ -99,6 +100,7 @@ function App() {
           <SkillsCard name="MongoDB" icon={mongo} />
           <SkillsCard name="MySQL" icon={mysql} />
           <SkillsCard name="Java" icon={java} />
+          <SkillsCard name="Next.js" icon={next}/>
         </div>
       </div>
 

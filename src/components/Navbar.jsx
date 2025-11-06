@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import logo from '../assets/logo3.png';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import './Navbar.css'; 
-import resumeUrl from '../assets/ShashanksResume.pdf'; // Import the resume PDF
+import resumeUrl from '../assets/resumeShashank.pdf'; // Import the resume PDF
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
